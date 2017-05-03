@@ -1,3 +1,9 @@
+h2{
+	color: $primary;
+	font-size: rem-calc(42);
+	margin: rem-calc(20) 0;
+}
+
 .promo-video{
 	position: relative;
 
@@ -47,6 +53,88 @@
 	  height: rem-calc(8);
 	  box-shadow: 0 28px 0 $white, 0 14px 0 $white
     } 
+}
 
+section.rooms{
+    padding: rem-calc(30);
+
+	div.room-image{
+		position: relative;
+		.room-title{
+		   position: absolute;
+		   bottom: 0;
+		   left: 0;
+		   padding-left: rem-calc(20);
+		   h3{color: $white;
+		   }
+		}
+	}
+
+	div.room-content{
+	  background-color: $white;
+	  padding:rem-calc(20);
+	}
+}
+
+.button{
+	@include button-style($secondary, darken($secondary, 10),$white);
+	text-transform:uppercase;
+	font-weight: bold;
+	font-size: rem-calc(16);
+	margin: rem-calc(20 0);
+}
+
+/*** Seperator Image ***/
+
+
+
+
+.seperator-image{
+	height: 200px;
+	background-position: center center;
+	background-repeat: no-repeat;
+    background-attachment:scroll;
+
+    @include breakpoint(medium){
+      height:350px;
+      background-size:cover;
+    }
+
+    @include breakpoint(large){background-size: cover;}
+}
+.pool-image{
+    background-image:url(../img/separators/small/separator01-image.jpg);
+
+    @include breakpoint(medium){
+       background-image:url(../img/separators/medium/separator01-image.jpg);
+    }
+
+    @include breakpoint(large){
+  		background-image:url(../img/separators/large/separator01-image.jpg);
+    }
+	
+}
+
+
+/*** About Us Section ***/
+
+.about-us-gallery{
+	height: rem-calc(420);
+	position: relative;
+
+	.empty{
+		height: rem-calc(420);
+	}
+	.bluebg{
+		background-color: $primary;
+
+	}
+	div.content-about-us{
+		position: absolute;
+		top: rem-calc(20);
+		left: 0;
+		width: 100%;
+		h2.white{color: $white;}
+	}
 
 }

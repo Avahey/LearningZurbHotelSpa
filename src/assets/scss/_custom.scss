@@ -119,22 +119,62 @@ section.rooms{
 /*** About Us Section ***/
 
 .about-us-gallery{
-	height: rem-calc(420);
-	position: relative;
+	@include breakpoint(medium){
+		height:rem-calc(560);
+		position: relative;
+	}
+
+	@include breakpoint(medium){
+		height:rem-calc(420);
+	}
+
 
 	.empty{
-		height: rem-calc(420);
-	}
-	.bluebg{
-		background-color: $primary;
+
+		@include breakpoint(medium){
+		  	height:rem-calc(560);
+	    }
+
+	    @include breakpoint(medium){
+			height:rem-calc(420);
+	     }
 
 	}
+
 	div.content-about-us{
-		position: absolute;
-		top: rem-calc(20);
-		left: 0;
-		width: 100%;
-		h2.white{color: $white;}
+       @include breakpoint(medium){
+			position: absolute;
+			top: rem-calc(20);
+			left: 0;
+			width: 100%;
+			
+			h2.white{
+				color: $white;
+			}
+		}
 	}
 
 }
+
+.bluebg{
+		background-color: $primary;
+
+	}
+
+.bar-image{
+    background-image:url(../img/separators/small/separator02-image.jpg);
+
+    @include breakpoint(medium){
+       background-image:url(../img/separators/medium/separator02-image.jpg);
+    }
+
+    @include breakpoint(large){
+  		background-image:url(../img/separators/large/separator02-image.jpg);
+    }
+	
+}
+
+section.booking{
+	padding: rem-calc(15);
+}
+
